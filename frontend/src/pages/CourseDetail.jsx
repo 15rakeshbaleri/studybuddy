@@ -1,42 +1,40 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import courses from "../data/courses"; // Import courses data
+import courses from "../data/courses"; // Importing courses data
 import Style from "./CourseDetail.module.css";
-import CourseTracker from "../components/CourseTracker"; // Import the CourseTracker component
+import CourseTracker from "../components/CourseTracker"; // Assuming CourseTracker is a component that tracks video completion
 
 const CourseDetail = () => {
-  const { id } = useParams(); // Get the course ID from URL params
+  const { id } = useParams(); // Get the course ID from the URL params
   const course = courses.find((c) => c.id === parseInt(id)); // Find the course by ID
 
-  // Check if the course exists
   if (!course) {
     return <h2 className="text-danger">Course not found</h2>;
   }
 
-  // State to track the watched videos
   const [watchedCount, setWatchedCount] = useState(0);
   const [completedVideos, setCompletedVideos] = useState(
     new Array(course.videos.length).fill(false)
   );
 
   const handleVideoClick = (index) => {
-    setWatchedCount((prevCount) => prevCount + 1); // Increment watched count
+    setWatchedCount((prevCount) => prevCount + 1);
     if (!completedVideos[index]) {
-      markAsCompleted(index); // Mark as completed if not already
+      markAsCompleted(index);
     }
   };
 
   const markAsCompleted = (index) => {
     setCompletedVideos((prevCompleted) => {
       const newCompleted = [...prevCompleted];
-      newCompleted[index] = true; // Mark this video as completed
+      newCompleted[index] = true;
       return newCompleted;
     });
   };
 
   const totalVideos = course.videos.length;
-  const completedCount = completedVideos.filter(Boolean).length; // Count completed videos
-  const progressPercentage = ((completedCount / totalVideos) * 100).toFixed(2); // Calculate progress percentage
+  const completedCount = completedVideos.filter(Boolean).length;
+  const progressPercentage = ((completedCount / totalVideos) * 100).toFixed(2);
 
   return (
     <div className="container mt-4">
@@ -44,13 +42,13 @@ const CourseDetail = () => {
       <p>{course.description}</p>
       <h4>Course Details:</h4>
       <ul>
-        <li>Instructor: Shradha</li>
-        <li>Duration: 4 weeks</li>
-        <li>Certification: Yes</li>
+        <li>Instructor: {course.instructor}</li>
+        <li>Duration: {course.duration}</li>
+        <li>Certification: {course.certification ? "Yes" : "No"}</li>
       </ul>
-      <div className={`${Style["playlist-div"]}`}>
+      <div className={Style["playlist-div"]}>
         {course.videos.map((video, index) => (
-          <div key={index} className={`${Style["video-container"]}`}>
+          <div key={index} className={Style["video-container"]}>
             <iframe
               width="100%"
               height="400"
@@ -59,16 +57,16 @@ const CourseDetail = () => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              onClick={() => handleVideoClick(index)} // Mark video as watched and increment count
+              onClick={() => handleVideoClick(index)} // Mark video as watched
             ></iframe>
             <p>{video.description}</p>
             <span
-              className={`${
+              className={
                 completedVideos[index]
                   ? Style["completed"]
                   : Style["incomplete"]
-              }`}
-              onClick={() => markAsCompleted(index)} // Mark video as completed on click
+              }
+              onClick={() => markAsCompleted(index)}
             >
               {completedVideos[index] ? "⭐" : "☆"}
             </span>
@@ -77,9 +75,9 @@ const CourseDetail = () => {
       </div>
 
       {/* Progress Bar */}
-      <div className={`${Style["progress-container"]}`}>
+      <div className={Style["progress-container"]}>
         <div
-          className={`${Style["progress-bar"]}`}
+          className={Style["progress-bar"]}
           style={{ width: `${progressPercentage}%` }}
         >
           {progressPercentage}%

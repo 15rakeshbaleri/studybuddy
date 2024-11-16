@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./First_login.module.css"; // Import the CSS module
 import logo from "../resource/Screenshot 2024-10-01 171920.png";
-import white from "../resource/Screenshot 2024-11-13 201024.png";
-
+import das from "../resource/dashboard.png";
+import tec from "../resource/teacher.jpeg";
+import test from "../resource/test_div.jpeg";
 function First_login() {
   return (
     <>
@@ -14,7 +15,7 @@ function First_login() {
           width="150"
           height="70"
         />
-        <h1 className="display-5 fw-bold text-body-emphasis">STUDDY BUDDY</h1>
+        <h1>STUDDY BUDDY</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
@@ -39,7 +40,7 @@ function First_login() {
           <div className="card shadow-sm">
             <img
               className="bd-placeholder-img card-img-top"
-              src={white}
+              src={das}
               alt="Thumbnail"
               width="100%"
               height="225"
@@ -60,7 +61,7 @@ function First_login() {
           <div className="card shadow-sm">
             <img
               className="bd-placeholder-img card-img-top"
-              src={white}
+              src={das}
               alt="Thumbnail"
               width="100%"
               height="225"
@@ -81,7 +82,7 @@ function First_login() {
           <div className="card shadow-sm">
             <img
               className="bd-placeholder-img card-img-top"
-              src={white}
+              src={das}
               alt="Thumbnail"
               width="100%"
               height="225"
@@ -104,7 +105,7 @@ function First_login() {
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
             <img
-              src={white}
+              src={das}
               className="d-block mx-lg-auto img-fluid"
               alt="Bootstrap Themes"
               width="700"

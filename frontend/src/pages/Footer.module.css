@@ -45,3 +45,23 @@
   text-decoration: none;
   color: #5983fc;
 }
+/* Footer.module.css */
+.footerBackground {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 20px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.leftSection {
+  background-color: #007bff; /* Left section background color */
+  color: white;
+  padding: 30px;
+}
+
+.rightSection {
+  background-color: #f1f1f1; /* Right section background color */
+  padding: 30px;
+}

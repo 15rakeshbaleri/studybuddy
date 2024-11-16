@@ -53,3 +53,10 @@ button {
   color: white;
   border-radius: 5px;
 }
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-weight: 600;
+  color: black;
+}
