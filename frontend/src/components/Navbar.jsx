@@ -32,9 +32,9 @@ const Navbar = ({ onCourseClick, onLoginClick }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={onCourseClick}>
-                Courses
-              </a>
+              <Link className="nav-link " to="/courses">
+                courses
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="#">

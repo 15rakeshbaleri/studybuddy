@@ -4,7 +4,7 @@ import logo from "../resource/Screenshot 2024-10-01 171920.png";
 import das from "../resource/dashboard.png";
 import tec from "../resource/teacher.jpeg";
 import test from "../resource/test_div.jpeg";
-function First_login() {
+function First_login({ onLoginClick, onSignup }) {
   return (
     <>
       <div className={styles.innerContainer}>
@@ -25,10 +25,18 @@ function First_login() {
             qui sit, ratione ad voluptatibus quidem! Nisi!
           </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+            <button
+              type="button"
+              className="btn btn-primary btn-lg px-4 gap-3"
+              onClick={onLoginClick}
+            >
               Login
             </button>
-            <button type="button" className="btn btn-secondary btn-lg px-4">
+            <button
+              type="button"
+              className="btn btn-secondary btn-lg px-4"
+              onClick={onSignup}
+            >
               Signup
             </button>
           </div>

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ImageCard from "./ImageCard";
 import styles from "./ImageCardList.module.css";
 
-// Import courses data
 import courses from "../data/courses";
 
 const ImageCardList = () => {
@@ -16,7 +15,7 @@ const ImageCardList = () => {
         {courses.map((course) => (
           <Link to={`/course/${course.id}`} key={course.id}>
             <ImageCard
-              id={course.id} // Pass the course ID to the ImageCard
+              id={course.id}
               imageUrl={`https://via.placeholder.com/300x200?text=${course.title}`}
               title={course.title}
               category={course.category}

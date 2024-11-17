@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import courses from "../data/courses"; // Importing courses data
+import courses from "../data/courses";
 import Style from "./CourseDetail.module.css";
-import CourseTracker from "../components/CourseTracker"; // Assuming CourseTracker is a component that tracks video completion
+import CourseTracker from "../components/CourseTracker";
 
 const CourseDetail = () => {
-  const { id } = useParams(); // Get the course ID from the URL params
-  const course = courses.find((c) => c.id === parseInt(id)); // Find the course by ID
+  const { id } = useParams();
+  const course = courses.find((c) => c.id === parseInt(id));
 
   if (!course) {
     return <h2 className="text-danger">Course not found</h2>;

@@ -7,24 +7,37 @@ import Footer_below from "./components/Footer_below";
 import First_login from "./pages/First_login";
 import Signup_page from "./pages/Signup_page";
 import ImageCardList from "./pages/ImageCardList";
-import CourseDetail from "./pages/CourseDetail"; // Import the CourseDetail component
+import CourseDetail from "./pages/CourseDetail";
 
 function App() {
   const [showFooter, setShowFooter] = useState(false);
+  const [Showsignup, setShowsignup] = useState(false);
 
   const handleLoginClick = () => {
     console.log("clicked login");
+    setShowsignup(false);
     setShowFooter(true);
+  };
+  const handlesignupClick = () => {
+    console.log("clicked signup");
+    setShowFooter(false);
+    setShowsignup(true);
   };
 
   return (
     <Router>
       <Navbar onLoginClick={handleLoginClick} />
-
+      {showFooter && <Footer />}
+      {Showsignup && <Signup_page />}
       <Routes>
         <Route
           path="/"
-          element={<First_login onLoginClick={handleLoginClick} />}
+          element={
+            <First_login
+              onLoginClick={handleLoginClick}
+              onSignup={handlesignupClick}
+            />
+          }
         />
         <Route
           path="/login"
@@ -35,7 +48,6 @@ function App() {
         <Route path="/course/:id" element={<CourseDetail />} />{" "}
       </Routes>
 
-      {showFooter && <Footer />}
       <Footer_below />
     </Router>
   );
