@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import ImageCard from "./ImageCard";
 import styles from "./ImageCardList.module.css";
 
-import courses from "../data/courses";
-
 const ImageCardList = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/videos/");
+        setCourses(response.data);
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
+
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>
@@ -13,12 +27,12 @@ const ImageCardList = () => {
       </h2>
       <div className={styles.grid}>
         {courses.map((course) => (
-          <Link to={`/course/${course.id}`} key={course.id}>
+          <Link to={`/course/${course.playlistId}`} key={course.playlistId}>
             <ImageCard
-              id={course.id}
+              id={course.playlistId}
               imageUrl={`https://via.placeholder.com/300x200?text=${course.title}`}
               title={course.title}
-              category={course.category}
+              description={course.description}
             />
           </Link>
         ))}
