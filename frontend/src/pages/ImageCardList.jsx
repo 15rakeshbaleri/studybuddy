@@ -30,12 +30,13 @@ const ImageCardList = () => {
           <Link to={`/course/${course.playlistId}`} key={course.playlistId}>
             <ImageCard
               id={course.playlistId}
-              imageUrl={`https://via.placeholder.com/300x200?text=${course.title}`}
+              imageUrl={course.image}
               title={course.title}
               description={course.description}
             />
           </Link>
         ))}
+        {console.log(courses)}
       </div>
     </div>
   );
