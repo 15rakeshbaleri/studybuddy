@@ -1,7 +1,49 @@
+/* App.module.css */
+
+/* Navigation Bar */
 .navigationbar {
-  width: 100%;
-  background-color: rgb(9, 63, 85);
+  background-color: #60a4e8; /* Dark background color */
+  padding: 1rem;
 }
 li {
-  color: white;
+  font-size: large;
+}
+.navbar-nav {
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+.nav-item .nav-link {
+  color: #ffffff; /* White text color for links */
+  padding: 10px 20px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-item .nav-link:hover {
+  color: #00bcd4; /* Highlight color on hover */
+}
+
+/* Button styles */
+.button {
+  background-color: #1d373b; /* Custom button color */
+  border-color: #00bcd4; /* Border color */
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.button:hover {
+  background-color: #007c8f; /* Darker hover color */
+  border-color: #007c8f; /* Border color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar-nav {
+    font-size: 1rem; /* Smaller font size on mobile */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* White icon color */
+  }
 }

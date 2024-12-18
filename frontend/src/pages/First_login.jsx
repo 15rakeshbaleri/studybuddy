@@ -18,11 +18,9 @@ function First_login() {
         <h1>STUDDY BUDDY</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            dolores nemo deserunt voluptas iusto aut magni. Impedit ut tenetur
-            facilis? Itaque minima obcaecati corrupti magnam doloribus ex
-            recusandae, nisi at rerum quos labore impedit facere vero unde rem
-            qui sit, ratione ad voluptatibus quidem! Nisi!
+            STUDDY BUDDY helps students succeed by providing study materials,
+            tools, and resources. Join our community for accessible notes, video
+            tutorials, and productivity tools to enhance your learning journey.
           </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <button
@@ -55,9 +53,7 @@ function First_login() {
             />
             <div className="card-body">
               <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur minus repudiandae quidem blanditiis. Minima assumenda
-                error suscipit temporibus eligendi provident?
+                Create an account or log in to access your courses.
               </p>
               <div className="d-flex justify-content-between align-items-center">
                 <a href="">learn</a>
@@ -76,9 +72,8 @@ function First_login() {
             />
             <div className="card-body">
               <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur minus repudiandae quidem blanditiis. Minima assumenda
-                error suscipit temporibus eligendi provident?
+                Browse available courses, explore content, and start learning
+                today.
               </p>
               <div className="d-flex justify-content-between align-items-center">
                 <a href="">learn</a>
@@ -97,9 +92,8 @@ function First_login() {
             />
             <div className="card-body">
               <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur minus repudiandae quidem blanditiis. Minima assumenda
-                error suscipit temporibus eligendi provident?
+                View detailed course information, track progress, and watch
+                videos." Let me know if you'd like any changes!
               </p>
               <div className="d-flex justify-content-between align-items-center">
                 <a href="">learn</a>
@@ -123,15 +117,15 @@ function First_login() {
           </div>
           <div className="col-lg-6">
             <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur.
+              Unlock Knowledge: Start Your Learning Journey
             </h1>
             <p className="lead">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-              molestias, vero mollitia repellat similique, quaerat autem porro,
-              esse aliquid debitis accusantium quidem doloremque quam nihil
-              cumque iste aperiam. Alias accusamus maxime, illo qui placeat
-              soluta quae pariatur quasi blanditiis facilis, amet ex culpa
-              architecto quisquam dolore incidunt! Ipsa, est corrupti?
+              Log in to access personalized courses, explore various topics,
+              track your progress, watch instructional videos, and start
+              learning with detailed course overviews, progress tracking, and
+              interactive features for an enriched experience." Let me know if
+              you'd like further modifications or specific details for each
+              section!
             </p>
           </div>
         </div>
