@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import CourseTracker from "../components/CourseTracker";
 import Style from "./CourseDetail.module.css";
+
 const CourseDetail = () => {
   const { id } = useParams();
   const [course, setCourse] = useState(null);
@@ -31,12 +32,20 @@ const CourseDetail = () => {
     fetchCourse();
   }, [id]);
 
-  const handleVideoClick = (index) => {
+  const debounce = (func, delay) => {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), delay);
+    };
+  };
+
+  const handleVideoClick = debounce((index) => {
     if (!completedVideos[index]) {
       setWatchedCount((prevCount) => prevCount + 1);
       markAsCompleted(index);
     }
-  };
+  }, 300);
 
   const markAsCompleted = (index) => {
     setCompletedVideos((prevCompleted) => {
@@ -47,7 +56,18 @@ const CourseDetail = () => {
   };
 
   if (loading) return <h2 className="text-center text-primary">Loading...</h2>;
-  if (error) return <h2 className="text-danger text-center">{error}</h2>;
+  if (error)
+    return (
+      <div className="text-center">
+        <h2 className="text-danger">{error}</h2>
+        <button
+          className="btn btn-primary"
+          onClick={() => window.location.reload()}
+        >
+          Retry
+        </button>
+      </div>
+    );
 
   const totalVideos = course.video.length;
   const completedCount = completedVideos.filter(Boolean).length;
@@ -75,10 +95,14 @@ const CourseDetail = () => {
 
       <div className={Style.maincontainers}>
         {course.video.map((video, index) => (
-          <div key={video._id} className={`col-md-3 mb-4`}>
-            <div className={Style.cards}>
+          <div key={video._id} className="col-md-3 mb-4">
+            <div
+              className={`${Style.cards} ${
+                completedVideos[index] ? "completed" : ""
+              }`}
+            >
               <iframe
-                className="card-img-top"
+                className={Style.cardframe}
                 width="100%"
                 height="250"
                 src={`https://www.youtube.com/embed/${video.videoId}`}
@@ -94,7 +118,7 @@ const CourseDetail = () => {
                   className={`btn ${
                     completedVideos[index]
                       ? "btn-success"
-                      : "btn-outline-secondary"
+                      : "btn-outline-warning"
                   }`}
                   onClick={() => markAsCompleted(index)}
                 >

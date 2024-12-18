@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Style from "../App.module.css";
 
-const Navbar = ({ onCourseClick, onLoginClick }) => {
+const Navbar = ({ onLoginClick }) => {
   return (
     <nav
       className={`${Style.navigationbar} navbar navbar-expand-lg`}
@@ -37,8 +37,13 @@ const Navbar = ({ onCourseClick, onLoginClick }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
-                Link
+              <Link className="nav-link" to="/profie">
+                profile
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/timer">
+                Stop watch
               </Link>
             </li>
           </ul>

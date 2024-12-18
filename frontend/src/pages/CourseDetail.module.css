@@ -1,17 +1,91 @@
+/* Main Container for Flex Layout */
 .maincontainers {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
+  justify-content: center; /* Center content */
 }
+
+/* Video Container for Inline Flex */
 .videodiv {
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  align-items: center; /* Center items vertically */
 }
+
+/* Button Styling */
 button {
   width: 50%;
+  padding: 10px; /* Ensure consistent padding */
+  font-size: 1rem; /* Improve readability */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
+
+button:hover {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: white; /* Contrasting text color */
+}
+
+/* Card Container */
 .cards {
   width: 300px;
-  padding: 10px;
+  padding: 20px;
+  background-color: rgb(38, 143, 249);
+  color: white; /* Ensure text contrasts against background */
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Iframe for Video */
+.cardiframe {
+  width: fit-content;
+  border-radius: 20px;
+  overflow: hidden; /* Ensure rounded corners apply */
+}
+
+.cardframe {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Completed Cards */
+.completed {
+  background-color: #d4edda; /* Light green for completed cards */
+  border: 1px solid #c3e6cb; /* Green border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .videodiv {
+    flex-direction: column; /* Stack videos vertically */
+  }
+
+  button {
+    width: 100%; /* Full width buttons on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .cards {
+    padding: 15px; /* Adjust padding for small screens */
+  }
 }

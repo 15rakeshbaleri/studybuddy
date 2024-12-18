@@ -4,7 +4,7 @@ import logo from "../resource/Screenshot 2024-10-01 171920.png";
 import das from "../resource/dashboard.png";
 import tec from "../resource/teacher.jpeg";
 import test from "../resource/test_div.jpeg";
-function First_login({ onLoginClick, onSignup }) {
+function First_login() {
   return (
     <>
       <div className={styles.innerContainer}>
@@ -35,7 +35,7 @@ function First_login({ onLoginClick, onSignup }) {
             <button
               type="button"
               className="btn btn-secondary btn-lg px-4"
-              onClick={onSignup}
+              onClick={onSignupClick}
             >
               Signup
             </button>

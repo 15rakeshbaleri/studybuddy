@@ -21,8 +21,6 @@ function RightSection() {
       );
       if (response.status === 200) {
         console.log("User logged in successfully", response.data);
-
-        // window.location.href = "/dashboard";
       }
     } catch (error) {
       console.error("Login failed:", error.response);
