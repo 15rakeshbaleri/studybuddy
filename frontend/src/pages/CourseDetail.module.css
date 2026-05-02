@@ -2,14 +2,20 @@
 .maincontainers {
   display: flex;
   flex-wrap: wrap;
+  border-radius: 5px;
   gap: 10px;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   justify-content: center; /* Center content */
 }
 
+<<<<<<< HEAD
 /* Video Container for Inline Flex */
+=======
+>>>>>>> 12a7224 (add new changes)
 .videodiv {
   display: flex;
+
   flex-direction: row;
   gap: 10px;
   align-items: center; /* Center items vertically */
@@ -34,6 +40,7 @@ button:hover {
 /* Card Container */
 .cards {
   width: 300px;
+<<<<<<< HEAD
   padding: 20px;
   background-color: rgb(38, 143, 249);
   color: white; /* Ensure text contrasts against background */
@@ -88,4 +95,27 @@ button:hover {
   .cards {
     padding: 15px; /* Adjust padding for small screens */
   }
+=======
+  background-color: rgba(8, 119, 179, 0.551);
+  margin: 50px;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+}
+.quizcontainer {
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(52, 54, 56);
+}
+.quizcontainertxt {
+  color: #8391a8;
+  font-size: large;
+  font-weight: 500;
+>>>>>>> 12a7224 (add new changes)
 }

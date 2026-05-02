@@ -30,3 +30,8 @@ const Home = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+
+export default Home;
+>>>>>>> 5ef35ba (submit)

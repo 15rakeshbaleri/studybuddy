@@ -8,10 +8,14 @@ import First_login from "./pages/First_login";
 import Signup_page from "./pages/Signup_page";
 import ImageCardList from "./pages/ImageCardList";
 import CourseDetail from "./pages/CourseDetail";
+<<<<<<< HEAD
 import User_Profile from "./pages/User_Profile";
 import Countdown from "./components/Countdown/Countdown";
 import RightSection from "./pages/RightSection";
 
+=======
+import Countdown from "./components/time/Countdown";
+>>>>>>> 5ef35ba (submit)
 function App() {
   const [showFooter, setShowFooter] = useState(false);
 
@@ -79,11 +83,20 @@ function App() {
           path="/"
           element={<First_login onLoginClick={handleLoginClick} />}
         />
+<<<<<<< HEAD
         <Route path="/login" element={<RightSection />} />
         <Route
           path="/signup"
           element={<Signup_page onSignup={handlesignupClick} />}
         />
+=======
+        <Route path="/signup" element={<Signup_page />} />
+        <Route path="/time" element={<Countdown />} />
+        <Route path="/courses" element={<ImageCardList />} />
+        <Route path="/courses" element={<ImageCardList />} />
+        <Route path="/course/:id" element={<CourseDetail />} />{" "}
+      </Routes>
+>>>>>>> 5ef35ba (submit)
 
         {/* Protected Routes (can be conditionally rendered based on login state) */}
         <Route path="/courses" element={<ImageCardList />} />
