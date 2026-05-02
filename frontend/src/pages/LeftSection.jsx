@@ -3,14 +3,14 @@ import React from "react";
 function LeftSection() {
   return (
     <div>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, possimus.
-      </h1>
+      <h1>Study Buddy</h1>
       <ul>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          dicta eos veniam est recusandae vitae perferendis, voluptatem quod,
-          fugiat ut numquam dolores error doloribus iusto?
+          Enhance your learning journey with curated study materials and
+          resources tailored for academic success. Access semester-wise notes,
+          detailed explanations, and practice problems to master concepts
+          effectively. Join a community of learners dedicated to achieving
+          academic excellence.
         </p>
       </ul>
     </div>

@@ -36,6 +36,8 @@ function SignupPage() {
       );
 
       if (response.status === 201) {
+        alert("User signed up successfully");
+
         console.log("User signed up successfully", response.data);
       }
     } catch (error) {
@@ -117,7 +119,11 @@ function SignupPage() {
                   <label htmlFor="confirmPassword">Confirm Password</label>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100">
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100"
+                  to="/courses"
+                >
                   Sign Up
                 </button>
               </form>

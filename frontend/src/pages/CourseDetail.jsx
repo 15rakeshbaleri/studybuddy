@@ -129,17 +129,25 @@ const CourseDetail = () => {
           </div>
         ))}
       </div>
-      <div className="text-center my-4">
-        {/* Quiz button that opens in a new tab */}
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeXZXlM8oZm3BuifcdadlrtrqIDaHe3mEREHEsnidXuucABaQ/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary"
-        >
-          Take the Quiz
-        </a>
+      <div className={`${Style.quizcontainer}`}>
+        <div className="text-center my-4">
+          {/* Text above the quiz button */}
+          <p className={`${Style.quizcontainertxt}`}>
+            Test your knowledge with our quiz! Click below to get started.
+          </p>
+
+          {/* Quiz button that opens in a new tab */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeXZXlM8oZm3BuifcdadlrtrqIDaHe3mEREHEsnidXuucABaQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Take the Quiz
+          </a>
+        </div>
       </div>
+
       <div className="progress my-4">
         <div
           className="progress-bar progress-bar-striped progress-bar-animated"
